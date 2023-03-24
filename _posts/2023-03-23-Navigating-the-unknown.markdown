@@ -141,21 +141,6 @@ The Steup.sol looks like this :
 
 pragma solidity ^0.8.18;
 
-
-contract Unknown {
-    
-    bool public updated;
-
-    function updateSensors(uint256 version) external {
-        if (version == 10) {
-            updated = true;
-        }
-    }
-
-}
-cat: cat: No such file or directory
-pragma solidity ^0.8.18;
-
 import {Unknown} from "./Unknown.sol";
 
 contract Setup {
@@ -169,7 +154,105 @@ contract Setup {
         return TARGET.updated();
     }
 }
+
 {% endhighlight %}
+
+
+And the Unknown.sol :
+
+{% highlight ruby %}
+pragma solidity ^0.8.18;
+
+
+contract Unknown {
+    
+    bool public updated;
+
+    function updateSensors(uint256 version) external {
+        if (version == 10) {
+            updated = true;
+        }
+    }
+
+}
+{% endhighlight %}
+
+![image](https://user-images.githubusercontent.com/37570367/227419091-1d0c4702-b171-4e22-b52a-f731064b1895.png)
+
+So after adding the smart contracts, lets take a look of the code an what means :
+
+![image](https://user-images.githubusercontent.com/37570367/227419591-4a41d661-d9b1-4c8d-ae85-aa42266f1d97.png)
+
+
+So now lets check the Unknown.sol :
+
+![image](https://user-images.githubusercontent.com/37570367/227419930-70cac507-2e45-40c6-bc60-384c52b13e27.png)
+
+Ok so only wee need to interact with the smart contract and change the value for `10`
+
+
+So we know what need to do , lets go to compile the smart contracts to interact with him, for this you have two ways to do it :
+
+the first one is only pres `ctrl + S` ( saving ), and the second is go here and press compile : 
+![image](https://user-images.githubusercontent.com/37570367/227420593-06ab550e-0adf-44cd-aa2e-7b2ce94f3084.png)
+
+After this we can go to deploy and check if you are deploying the right smart contract :
+
+![image](https://user-images.githubusercontent.com/37570367/227420765-4b90570c-c8d1-418f-8776-e32fe44b9939.png)
+
+Before Start deploying you need to select the web3 inyected option here and select `Metamask` : 
+
+![image](https://user-images.githubusercontent.com/37570367/227421066-7eb341ea-ea2f-47a9-a9f7-7d5d07934abb.png)
+
+This gonna say to de IDE someting like  -> " use this RPC of my metamask to deploy the smart contract and use my account too "
+
+ok now we can deploy, first gonna deploy the `Setup.sol` :
+
+![image](https://user-images.githubusercontent.com/37570367/227421724-a5db008b-1a87-4798-a14f-7adf6ecdf2c8.png)
+
+After click in deploy may be you conna see that error, that is because you are not in the right account, in my case i decide to show you if you have this issue too
+
+When this happend you can reject the transaction and then you need to switch for your account added and connect with remix like this :
+
+![image](https://user-images.githubusercontent.com/37570367/227422030-8111b5b0-c03e-4481-b11c-e5828ca80aea.png)
+
+![image](https://user-images.githubusercontent.com/37570367/227422186-f40f9652-bc93-4fc6-93df-1464c2aed879.png)
+
+So when is connected looks like this : 
+![image](https://user-images.githubusercontent.com/37570367/227422324-159c13c2-d758-43f1-be55-0bcaf7660dc6.png)
+
+
+Ok lets continue with the deploy, you have two ways to do it :
+
+- deploy your smart contract ( new one )
+- use the structure of the smart contract to instantiate another ( we gonna use this one )
+
+but what exactly means ? , this means you gonna use the deployed smart contract and put in your structure of your solidity code, let me draw it for you :
+
+![image](https://user-images.githubusercontent.com/37570367/227424094-904cd28f-9460-4ba2-9d0e-1051230a19b1.png)
+
+Ok now lets add the address, note : be sure is the same structure ( same file .sol ) :
+
+![image](https://user-images.githubusercontent.com/37570367/227424301-c9433135-7bd4-4117-b402-0a8fdfabed11.png)
+
+![image](https://user-images.githubusercontent.com/37570367/227424397-f73d18c6-f5fa-4c00-bab8-9412236c75ca.png)
+
+After this you gonna see this below : 
+![image](https://user-images.githubusercontent.com/37570367/227424496-2db7bde5-5de2-4216-ac9b-8f607329c893.png)
+
+
+We can expand and see this, ( you can press the blue buttons to interact with the smart contract ) :
+
+Note : The Button has colors :
+- the blue buttons are `public view` ( This mean dont have cost per interaction )
+- the orange buttons are `writing functions``( This mean has cost )
+- the red buttons are `payable functions` ( This means you need to send crypto to interact with him ), in this challenge dont have red buttons but is a good idea to know it 
+
+
+ 
+
+
+
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
