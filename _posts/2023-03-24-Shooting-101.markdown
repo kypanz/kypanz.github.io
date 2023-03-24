@@ -19,7 +19,84 @@ The connection and how interact with remix i gonna skipped, but if you are curio
 - Link to the first challenge "[CTF] Navigating the Unknown" : https://kypanz.github.io/jekyll/update/2023/03/24/Navigating-the-unknown.html
 
 
-Ok lets go to the smart contracts to see how we can interact with them :
+First lets start the docker of the challenge and download the files : 
+
+![image](https://user-images.githubusercontent.com/37570367/227661559-61372e5b-55b4-4c84-bff7-96bab51af22b.png)
+
+Ok lets go to see the smart contracts donloaded, we have two files :
+- Setup.sol
+- ShootingArea.sol
+
+
+# Setup.sol
+{% highlight ruby %}
+
+pragma solidity ^0.8.18;
+
+import {ShootingArea} from "./ShootingArea.sol";
+
+contract Setup {
+    ShootingArea public immutable TARGET;
+
+    constructor() {
+        TARGET = new ShootingArea();
+    }
+
+    function isSolved() public view returns (bool) {
+        return TARGET.firstShot() && TARGET.secondShot() && TARGET.thirdShot();
+    }
+}
+
+{% endhighlight %}
+
+# ShootingArea.sol
+{% highlight ruby %}
+pragma solidity ^0.8.18;
+
+contract ShootingArea {
+    bool public firstShot;
+    bool public secondShot;
+    bool public thirdShot;
+
+    modifier firstTarget() {
+        require(!firstShot && !secondShot && !thirdShot);
+        _;
+    }
+
+    modifier secondTarget() {
+        require(firstShot && !secondShot && !thirdShot);
+        _;
+    }
+
+    modifier thirdTarget() {
+        require(firstShot && secondShot && !thirdShot);
+        _;
+    }
+
+    receive() external payable secondTarget {
+        secondShot = true;
+    }
+
+    fallback() external payable firstTarget {
+        firstShot = true;
+    }
+
+    function third() public thirdTarget {
+        thirdShot = true;
+    }
+}
+
+{% endhighlight %}
+
+To solve this challenge is so simple, we need to interact with the 3 functions of the Target ( ShootingArea.sol )
+
+- fallback
+- receive
+- third
+
+Lets explain in the IDE with a draw :
+
+
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
