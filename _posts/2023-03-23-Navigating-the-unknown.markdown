@@ -208,11 +208,7 @@ This gonna say to de IDE someting like  -> " use this RPC of my metamask to depl
 
 ok now we can deploy, first gonna deploy the `Setup.sol` :
 
-![image](https://user-images.githubusercontent.com/37570367/227421724-a5db008b-1a87-4798-a14f-7adf6ecdf2c8.png)
-
-After click in deploy may be you conna see that error, that is because you are not in the right account, in my case i decide to show you if you have this issue too
-
-When this happend you can reject the transaction and then you need to switch for your account added and connect with remix like this :
+Note, be sure you are connected with metamask and the Remix IDE, let me show you
 
 ![image](https://user-images.githubusercontent.com/37570367/227422030-8111b5b0-c03e-4481-b11c-e5828ca80aea.png)
 
