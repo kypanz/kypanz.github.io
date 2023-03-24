@@ -70,19 +70,105 @@ ok this connection is more interesting, lest check the connection information :
 Ok we now have the information about the connection with the rpc , but how exacly we can connect with him ? and what exactly we need to do with the msart contracts ?
 
 Lets go for parts, first we gonna use a more easy method than the web3js or web3py, ethers or things like that, because is not necessary if the code is not gonna be automatizated for something, so we gonna use :
-- Metamask
-- Remix IDE
+- Metamask ( Crypto wallet )
+- Remix IDE ( IDE for solidity Smart contracts )
 - Smart Contracts
 And we gonna interact with the smart contracts mor easy and more simple to understand what happend really in a general level
 
-ok so first at all we need to download metamask and do the steps for configuration, i gonna skip that part because is not necessary to show how to do that, if you are curious you can check directly with this link : 
+ok so first at all we need to download metamask and do the steps for configuration, i gonna skip that part because is not necessary to show how to do that, if you are curious you can check directly with this link : https://metamask.io/
+
+So lets keep going : we gonna use the information showed before to connect, we know the :
+- RPC connection
+- Private key
+- Setup.sol ( code and address )
+- Target.sol ( code and address )
+
+So first we need to connect to the RPC, we gonna use the same metamask to do that ;) :
+- in this case the RPC url is  : `165.22.116.7:31092`
+
+so we only need to put the http:// before the ip and ports , so looks like this :
+- `http://165.22.116.7:31092`
+
+![image](https://user-images.githubusercontent.com/37570367/227415482-deab8eb5-a644-40f6-bf8e-8494aed009dc.png)
+![image](https://user-images.githubusercontent.com/37570367/227415630-5b8b5b87-0ebf-4e40-afb1-ea788cc90625.png)
+
+And here happends some intersting, you cant add a new network if you dont know the RPC : 
+
+![image](https://user-images.githubusercontent.com/37570367/227415912-a8edfff8-bc20-4ede-9724-ed6fdb7af80c.png)
+
+
+but let show you a trick, when you dont know what chain id it is just put whatever value , in this case i gonna put `1`, and then click outside the field to launch the form error :
+![image](https://user-images.githubusercontent.com/37570367/227416156-ea7a6854-ddb6-4399-afa4-a2323e7bd0d3.png)
+
+Ok we know what is the chain id, not all the time works, but in this case yes, so after i put the new chain id i see this :
+
+![image](https://user-images.githubusercontent.com/37570367/227416347-c62af0a3-c0e1-425e-9c3a-cd767639f8dd.png)
+
+if you see the symbol can be channged too, but is not necessary for know, just save it
+
+Ok so you gonna se something like this :
+
+![image](https://user-images.githubusercontent.com/37570367/227416536-480544ae-86ae-4741-9508-fb59fbb5ea27.png)
+
+Now we have the network connected with the random name for the crypto called `EXAMPLE`, but we dont have the right account
+
+So we gonna import the account using the private key obtained from the netcat connection
+
+- in this case the private key is : `0xb331b8bcd8882a6d755ee6517d9124feba3563d7d8c0b969c1de10837a21e456`
+
+![image](https://user-images.githubusercontent.com/37570367/227416889-1acf0ee7-ef4d-40a2-aa3a-d47e74859bc7.png)
+
+![image](https://user-images.githubusercontent.com/37570367/227416954-e53adbf9-d331-4ad6-be38-8e9a4ddeabe6.png)
+
+
+If you gonna check the address is the same : 
+![image](https://user-images.githubusercontent.com/37570367/227417032-48da758b-47a4-4b0f-a259-df0bd78a2f13.png)
+
+![image](https://user-images.githubusercontent.com/37570367/227417101-3b76a0d7-960b-4795-9d02-c39a8ec2470d.png)
+
+
+and now we have some Cyrptos to test too, so lets go know for the smart contracts and the IDE for see what we can do :
+
+- Link to the IDE for smart contracts : https://remix.ethereum.org/
+
+Lets create the two files : 
+- Setup.sol
+- Unknown.sol
+
+The Steup.sol looks like this : 
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+
+pragma solidity ^0.8.18;
+
+
+contract Unknown {
+    
+    bool public updated;
+
+    function updateSensors(uint256 version) external {
+        if (version == 10) {
+            updated = true;
+        }
+    }
+
+}
+cat: cat: No such file or directory
+pragma solidity ^0.8.18;
+
+import {Unknown} from "./Unknown.sol";
+
+contract Setup {
+    Unknown public immutable TARGET;
+
+    constructor() {
+        TARGET = new Unknown();
+    }
+
+    function isSolved() public view returns (bool) {
+        return TARGET.updated();
+    }
+}
 {% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
