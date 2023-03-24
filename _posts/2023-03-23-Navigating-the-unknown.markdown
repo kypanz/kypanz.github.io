@@ -92,7 +92,7 @@ so we only need to put the http:// before the ip and ports , so looks like this 
 ![image](https://user-images.githubusercontent.com/37570367/227415482-deab8eb5-a644-40f6-bf8e-8494aed009dc.png)
 ![image](https://user-images.githubusercontent.com/37570367/227415630-5b8b5b87-0ebf-4e40-afb1-ea788cc90625.png)
 
-And here happends some intersting, you cant add a new network if you dont know the RPC : 
+And here happends some intersting, you cant add a new network if you dont know the Chain ID : 
 
 ![image](https://user-images.githubusercontent.com/37570367/227415912-a8edfff8-bc20-4ede-9724-ed6fdb7af80c.png)
 
