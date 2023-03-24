@@ -240,21 +240,36 @@ Ok now lets add the address, note : be sure is the same structure ( same file .s
 After this you gonna see this below : 
 ![image](https://user-images.githubusercontent.com/37570367/227424496-2db7bde5-5de2-4216-ac9b-8f607329c893.png)
 
-
 We can expand and see this, ( you can press the blue buttons to interact with the smart contract ) :
 
 Note : The Button has colors :
 - the blue buttons are `public view` ( This mean dont have cost per interaction )
-- the orange buttons are `writing functions``( This mean has cost )
+- the orange buttons are `writing functions``( This mean has cost per interaction )
 - the red buttons are `payable functions` ( This means you need to send crypto to interact with him ), in this challenge dont have red buttons but is a good idea to know it 
 
+So do the same with the Unknown.sol, be sure you are selected the same smart contract that you wanna instantiate, and the right address :
 
- 
+![image](https://user-images.githubusercontent.com/37570367/227424860-e5247115-3be5-4a45-94a0-af7e2ad0372f.png)
 
 
+Ok so now just lets interact with him and get the flag :
+
+![image](https://user-images.githubusercontent.com/37570367/227425048-bdd9ad28-2438-452a-999c-30d639dccde5.png)
+
+When you change the value for `10` and press the orange button this gonna popup the metamask for the intreaction with the smart contract,
+so here you need to confirm the transaction and the values gonna change : 
+![image](https://user-images.githubusercontent.com/37570367/227425361-ec3931b1-0b81-49cf-bff9-1f6c2a3d23d3.png)
 
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+After the transaction complete, you can re-check the values and ... magic, you do the challenge
+
+![image](https://user-images.githubusercontent.com/37570367/227425608-48ab2cef-12e2-4f41-8407-356d44a88987.png)
+
+
+now we need to reconnect to the server using netcat and get the flag : 
+
+![image](https://user-images.githubusercontent.com/37570367/227425748-2a6d7c32-3ba4-4d42-8584-725bbefeaa7b.png)
+
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
