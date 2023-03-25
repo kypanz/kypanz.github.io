@@ -16,7 +16,7 @@ What we gonna need :
 
 The connection and how interact with remix i gonna skipped, but if you are curious you can start with the first challenge of this link, to see how i prepare all the things : 
 
-- Link to the first challenge "[CTF] Navigating the Unknown" : https://kypanz.github.io/jekyll/update/2023/03/24/Navigating-the-unknown.html
+- Link to the first challenge [[CTF] Navigating the Unknown](https://kypanz.github.io/jekyll/update/2023/03/24/Navigating-the-unknown.html)
 
 
 First lets start the docker of the challenge and download the files : 
