@@ -96,6 +96,41 @@ To solve this challenge is so simple, we need to interact with the 3 functions o
 
 Lets explain in the IDE with a draw :
 
+![image](https://user-images.githubusercontent.com/37570367/227663127-200926ed-2552-4ab2-adb8-6222963f52d4.png)
+
+
+So here are interesting things, because the `fallback` function is gonna be activated only when the functions is called with data and has a value ( eth )
+Let me draw it :
+
+Note : if you try to intract with the function without `data` or `value` ( eth sended ), the transaction is gonna be revert
+
+![image](https://user-images.githubusercontent.com/37570367/227663638-0c2f38e8-921d-450c-95ab-239b686fc248.png)
+
+
+you can do this doing this :
+![image](https://user-images.githubusercontent.com/37570367/227663837-20210ff3-866b-461b-8e2a-af9bf6db4dbd.png)
+
+and you get the first shot done
+
+Lets go now for the second shot, the second shot to be activated you need to understand how works the receive function, in this case works like oposite of fallback funtion, this means you need to interact only with value but not with data, let me draw it :
+![image](https://user-images.githubusercontent.com/37570367/227664088-bded2c86-7871-41d3-8f05-edefa3bf6543.png)
+
+Ok so lets do that : 
+![image](https://user-images.githubusercontent.com/37570367/227664190-ac22bb92-bf4c-4762-9e31-534ba80f03b6.png)
+
+
+And then the last one, that only need to interact with a normal function : 
+![image](https://user-images.githubusercontent.com/37570367/227664390-695976cc-a239-4676-8ce9-949f6a1f04ad.png)
+
+Lets do it : 
+![image](https://user-images.githubusercontent.com/37570367/227664444-da04e933-bde8-4ee8-b271-464951f7d6ec.png)
+
+And thats it, now only need to connect with the docker and get the flag : 
+
+![image](https://user-images.githubusercontent.com/37570367/227666072-54765bef-1737-4652-bddb-d42ed80b3aea.png)
+
+
+Thats it :)
 
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
