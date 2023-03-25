@@ -119,6 +119,19 @@ So when the flow is gonna be called in the Target Smart Contract, in this case "
 
 And thats it, so lets deploy the smart contracts and see what happend after the attack : 
 
+- Creating the Smart Contract Attack
+![image](https://user-images.githubusercontent.com/37570367/227744407-8f91b8de-b370-4782-acbe-b84c034878c7.png)
+
+- Running the Attack function : 
+![image](https://user-images.githubusercontent.com/37570367/227744486-487256f7-e101-49b5-88cb-7329b25af955.png)
+
+- Result of the Attack : 
+![image](https://user-images.githubusercontent.com/37570367/227744565-90116fc8-d63a-47f3-a17c-ed2843ef1d88.png)
+
+
+So all is done, now just only connect to the docker and claim the flag :) :
+![image](https://user-images.githubusercontent.com/37570367/227744610-9795098f-aa51-4955-9cc5-a97709cc824c.png)
+
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
