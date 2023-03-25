@@ -107,7 +107,7 @@ Note : if you try to intract with the function without `data` or `value` ( eth s
 ![image](https://user-images.githubusercontent.com/37570367/227663638-0c2f38e8-921d-450c-95ab-239b686fc248.png)
 
 
-you can do this doing this :
+you can do this :
 ![image](https://user-images.githubusercontent.com/37570367/227663837-20210ff3-866b-461b-8e2a-af9bf6db4dbd.png)
 
 and you get the first shot done
