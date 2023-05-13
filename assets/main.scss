@@ -1,0 +1,48 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$colorBlue: #1756a9;
+$colorGreen: greenyellow;
+
+body {
+    background-color: black;
+    color:white;
+}
+
+a {
+    color: $colorBlue;
+}
+
+a:hover{
+    color: $colorGreen;
+}
+
+a.site-title {
+    color: $colorGreen !important;
+}
+
+a.page-link {
+    color: $colorGreen !important;
+}
+
+.site-header {
+    border-top: 5px solid $colorGreen !important;
+    border-bottom : 1px solid $colorGreen;
+    min-height: 55.95px;
+    position: relative;
+}
+
+.site-footer {
+    border-top: 1px solid $colorGreen;
+    padding: 30px 0;
+}
+
+h1 {
+    color : $colorGreen;
+}
+
+code {
+    color :black;
+}
