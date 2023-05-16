@@ -3,11 +3,12 @@
 
 @import "{{ site.theme }}";
 
+$colorBody: #162030;
 $colorBlue: #1756a9;
 $colorGreen: greenyellow;
 
 body {
-    background-color: black;
+    background-color: $colorBody;
     color:white;
 }
 
