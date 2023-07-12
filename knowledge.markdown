@@ -1,6 +1,6 @@
 ---
 layout: page
-title: knowledge
+title: Knowledge
 permalink: /kownledge/
 ---
 <img src="https://skillicons.dev/icons?i=git,js,html,css,typescript,nodejs,solidity,expressjs,react,nextjs,cpp,java,python,wordpress" />
