@@ -15,8 +15,8 @@ permalink: /about/
     </style>
 
 
-I am a Fullstack developer and i like build things, in my free time i build things just for fun
-also i like practice offensive cyber security too :)
+Fullstack developer, in my free time i build things just for fun
+also i like practice offensive cybersecurity too :)
 
 <div align="center" style="display:flex;justify-content:center;">
     <img src="https://media.tenor.com/JAZzfZupTTcAAAAS/gil-cat.gif" />
@@ -25,8 +25,6 @@ also i like practice offensive cyber security too :)
 # About you
 
 This is a good reason of why you need a VPN ( Virtual Private Network ) to keep your information safe.
-Note : I integrate this just for fun, dont be sacre
-
 <code id="visitorLocation">
 </code>
 
