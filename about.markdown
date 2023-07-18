@@ -12,14 +12,20 @@ permalink: /about/
             width: 100%;
             display: block;
         }
+        img#cat-image {
+            display:flex;
+            justify-content:center;
+            border-radius:50%;
+        }
+
     </style>
 
 
 Fullstack developer, in my free time i build things just for fun
 also i like practice offensive cybersecurity too :)
 
-<div align="center" style="display:flex;justify-content:center;">
-    <img src="https://media.tenor.com/JAZzfZupTTcAAAAS/gil-cat.gif" />
+<div align="center">
+    <img id="cat-image" src="https://media.tenor.com/JAZzfZupTTcAAAAS/gil-cat.gif" />
 </div>
 
 # About you
