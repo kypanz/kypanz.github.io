@@ -10,6 +10,7 @@ permalink: /kownledge/
 - Typescript
 - Web3
 - Blockchain
+- Solidity
 
 # Some experiences
 - stock trading platform prototype
