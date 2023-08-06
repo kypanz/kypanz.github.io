@@ -15,6 +15,9 @@ Script in Nodejs to filter pending transaction greater than specific amount in r
 - save the transactions `greater` tan `x` value in `memory`
 
 
+Github Repository [here](https://github.com/kypanz/blockchain-transactions-filter-in-console-with-charts)
+
+
 ## The code
 
 `index.js`
