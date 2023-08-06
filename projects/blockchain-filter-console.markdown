@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-nav_exclude: true
+menu: none
 ---
 
 # Blockchain filter in real time
