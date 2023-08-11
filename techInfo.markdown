@@ -2,6 +2,7 @@
 layout: page
 title: TechInfo
 permalink: /hacking/
+exclude: true
 ---
 <p> This section is gonna recopile information about crypto </p>
 
