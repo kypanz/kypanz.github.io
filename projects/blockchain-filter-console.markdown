@@ -15,7 +15,7 @@ Script in Nodejs to filter pending transaction greater than specific amount in r
 - save the transactions `greater` tan `x` value in `memory`
 
 
-<video width="800" height="240" controls>
+<video width="800" height="auto" controls>
   <source src="https://github.com/kypanz/kypanz.github.io/assets/37570367/519f94dd-155f-4d92-832e-9878fdb88b53" type="video/mp4">
 </video>
 
