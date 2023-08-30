@@ -9,4 +9,34 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+
+  <script> 
+  window.onload = function () {
+    const canvas = document.getElementById('matrix-effect');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width = document.body.offsetWidth;
+    const h = canvas.height = document.body.offsetHeight;
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0,0,w,h);
+    const cols = Math.floor(w/20) + 1;
+    const ypos = Array(cols).fill(0);
+    function matrix () {
+        ctx.fillStyle = '#0001';
+        ctx.fillRect(0,0,w,h);
+        ctx.fillStyle = '#00ff00';
+        ctx.font = '15pt monospace';
+        ypos.forEach((y, ind) => {
+        const colors = ['#ffe66d', '#01b6f2', '#ff6b6b', '#00ff00'];
+        ctx.fillStyle = colors[Math.round(Math.random() * 4)]
+            const text = String.fromCharCode(Math.random() * 128)
+            const x = ind * 20;
+            ctx.fillText(text,x,y);
+            if(y > 100 + Math.random() * 10000) ypos[ind] = 0;
+            else ypos[ind] = y + 20;
+        });
+    }
+    setInterval(matrix, 50);
+  }; 
+  </script>
+
 </head>
