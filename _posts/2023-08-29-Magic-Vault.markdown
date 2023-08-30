@@ -175,10 +175,10 @@ function _generateKey(uint256 _reductor) private returns (uint256 ret) {
 In a general summary this function use the `_reductor`, for example `1` or `2` mentioned before and is used to subtract the reductor from the actual block.number, and then are converting the result into a differents 
  value types, and then are incrementing the nonce, so to understand this more in deep you need to understand what exactly do all conversions used : 
 
- - blockhash => receive : uint | returns : bytes32
- - uint256 => receive : uint and others values like bytes32 | returns : uint256
- - abi.encodePacked => receive :  much types in this case a uint256 | returns : bytes
- - keccak256 => receive :  bytes | returns : bytes32
+ - blockhash => receive : uint  => returns : bytes32
+ - uint256 => receive : uint and others values like bytes32 => returns : uint256
+ - abi.encodePacked => receive :  much types in this case a uint256  => returns : bytes
+ - keccak256 => receive :  bytes => returns : bytes32
 
 So with this you can understand better what exactly the code are doing, but if you are smart may be you are asking your self what happend if the `uint256` is converting to a lower uint, well my friend, this is called explicit conversion, take a look : 
 
