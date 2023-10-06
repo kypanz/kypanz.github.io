@@ -1,0 +1,9 @@
+- title: Project 1
+  description: Description for Project 1
+  image_url: /path/to/image1.jpg
+  link: /projects/project1
+  
+- title: Project 2
+  description: Description for Project 2
+  image_url: /path/to/image2.jpg
+  link: /projects/project2
