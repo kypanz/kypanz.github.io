@@ -61,12 +61,12 @@ section#box-cards {
 {% for project in site.data.projects %}
 <div class="card">
     <div class="box">
-        <img class="post-project" src="https://github.com/kypanz/blockchain-transactions-filter-in-console-with-charts/assets/37570367/59b012f1-84a3-43fb-b7e6-abbc1cd8d022" />
+        <img class="post-project" src="{{ project.image_url }}" />
     </div>
     <p class="title"> Description </p>
-    <p> Blockchain transactions filter by balance in real time </p>
+    <p> {{ project.description }} </p>
     <div class="box">
-        <a href="/projects/blockchain-filter-console" class="btn"> Take a Look </a>
+        <a href="{{ project.link }}" class="btn"> Take a Look </a>
     </div>
 </div>
 
